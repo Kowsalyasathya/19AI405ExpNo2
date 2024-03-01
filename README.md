@@ -91,15 +91,14 @@ F H <BR>
 ## Program:
 
 ```
-#import defaultdict
 from collections import defaultdict
 def dfs(graph,start,visited,path):
     path.append(start)
     visited[start]=True
     for neighbour in graph[start]:
         if visited[neighbour]==False:
-            dfs(graph,neighbour,visited,path)
-            visited[neighbour]=True
+           dfs(graph,neighbour,visited,path)
+           visited[neighbour]=True
     return path
 graph=defaultdict(list)
 n,e=map(int,input().split())
@@ -139,6 +138,11 @@ path=[]
 traversedpath=dfs(graph,start,visited,path)
 print(traversedpath)
 ```
+## Output:
+![307090827-8e0d552c-0431-43ef-8621-e9524da999ce](https://github.com/Kowsalyasathya/19AI405ExpNo2/assets/118671457/1a8ce2d3-f634-4161-8f5a-faeb789af50c)
+
+
+![307094505-7a900d10-80e6-4922-bd78-56c1fe1330c2](https://github.com/Kowsalyasathya/19AI405ExpNo2/assets/118671457/cb717e1a-6110-487b-b911-06b3c4c9c11e)
 
 ## Result:
 
